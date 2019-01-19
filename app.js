@@ -13,8 +13,6 @@ const { Info } = require('./models/model.js');
 // load express
 const app = express();
 app.use(express.static(__dirname));
-app.use(express.static(__dirname + '/images'));
-
 app.use(bodyParser.json());
 
 // get app html page
