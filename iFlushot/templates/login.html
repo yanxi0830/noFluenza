@@ -57,10 +57,6 @@
           <br>
           <p class="title is-2">iFlushot</p>
           <p class="subtitle is-4"><i>Smarter way to fill your flushot form</i></p>
-          <!-- <p class="subtitle is-5">&#x2022 Encrypted user authorizaton</p>
-          <p class="subtitle is-5">&#x2022 Ready to go database system</p>
-          <p class="subtitle is-5">&#x2022 User login, signup, and settings</p>
-          -->
         </div>
         <div class="column is-auto">
           <div id="video">
@@ -69,7 +65,8 @@
     </video>
             </div>
               <br>
-              <a id="signup-button" class="form-button button is-primary is-inverted is-outlined">Sign Up</a>
+              <a id="picture-button" class="form-button button is-primary is-inverted is-outlined">Snap</a>
+              <canvas id="canvas" style="display:none;" width="300" height="300"></canvas>
               <br>
               <br>
               <i><a id="feedback" class="feedback"></a></i>
@@ -111,16 +108,26 @@
 <script>
 
 var video = document.querySelector("#videoElement");
+var button = document.getElementById("picture-button");
+var canvas = document.getElementById("canvas");
 
 if (navigator.mediaDevices.getUserMedia) {
    navigator.mediaDevices.getUserMedia({video: true})
  .then(function(stream) {
    video.srcObject = stream;
+   button.disabled = false;
+   button.onclick = function () {
+     canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+     var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+     window.location.href=img; // it will save locally
+     alert("Done");
+   }
  })
  .catch(function(err0r) {
    console.log("Something went wrong!");
  });
 }
 </script>
+
 <script src="../static/js/scripts.js"></script>
 {% endblock %}
