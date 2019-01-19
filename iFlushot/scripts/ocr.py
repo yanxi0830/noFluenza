@@ -27,16 +27,11 @@ ocr_url = vision_base_url + "ocr"
 # Set image_path to the local path of an image that you want to analyze.
 image_path = "/Users/xiyan/Desktop/uofthacks/iFlushot/media/card.png"
 
-image_url = "https://i.pinimg.com/474x/a2/c7/ef/a2c7ef4e3b6d9217fbf102a77027d763.jpg"
-
-# Read the image into a byte array
-# image_data = open(image_path, "rb").read()
-
-# headers = {'Ocp-Apim-Subscription-Key': subscription_key}
+image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D"
 
 headers    = {'Ocp-Apim-Subscription-Key': subscription_key}
 
-params  = {'language': 'unk', 'detectOrientation': 'true'}
+params  = {'language': 'en', 'detectOrientation': 'false'}
 
 data    = {'url': image_url}
 response = requests.post(ocr_url, headers=headers, params=params, json=data)
@@ -44,7 +39,7 @@ response.raise_for_status()
 
 analysis = response.json()
 
-print(analysis)
+# print(analysis)
 
 # Extract the word bounding boxes and text.
 line_infos = [region["lines"] for region in analysis["regions"]]
@@ -54,19 +49,4 @@ for line in line_infos:
     for word_metadata in line:
         for word_info in word_metadata["words"]:
             word_infos.append(word_info)
-# print(word_infos)
-
-
-
-# Display the image and overlay it with the extracted text.
-# plt.figure(figsize=(5, 5))
-# image = Image.open(BytesIO(requests.get(image_url).content))
-# ax = plt.imshow(image, alpha=0.5)
-# for word in word_infos:
-#     bbox = [int(num) for num in word["boundingBox"].split(",")]
-#     text = word["text"]
-#     origin = (bbox[0], bbox[1])
-#     patch  = Rectangle(origin, bbox[2], bbox[3], fill=False, linewidth=2, color='y')
-#     ax.axes.add_patch(patch)
-#     plt.text(origin[0], origin[1], text, fontsize=20, weight="bold", va="top")
-# plt.axis("off")
+print(word_infos)
