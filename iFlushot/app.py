@@ -32,7 +32,6 @@ def login():
     user = helpers.get_user()
     return render_template('home.html', user=user)
 
-
 @app.route("/logout")
 def logout():
     session['logged_in'] = False
