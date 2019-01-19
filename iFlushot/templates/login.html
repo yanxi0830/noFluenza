@@ -105,8 +105,7 @@
 
 {% endblock %}
 {% block scripts %}
-<script>
-
+<script type="text/javascript">
 var video = document.querySelector("#videoElement");
 var button = document.getElementById("picture-button");
 var canvas = document.getElementById("canvas");
@@ -118,6 +117,34 @@ if (navigator.mediaDevices.getUserMedia) {
    button.disabled = false;
    button.onclick = function () {
      canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+     $(function() {
+        var params = {
+            // Request parameters
+            "language": "en",
+            "detectOrientation ": "true",
+        };
+        // image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D";
+
+        $.ajax({
+            url: "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/ocr?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","6f1ee2649c0b42129fb2775815d9c526");
+            },
+            type: "POST",
+            // Request body
+            data: '{"url":"https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D"}'
+        })
+        .done(function(data) {
+            console.log(data)
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+
      //document.getElementById('forms1').scrollIntoView();
      //var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
      //window.location.href=img; // it will save locally
