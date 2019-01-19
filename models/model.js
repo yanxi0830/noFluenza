@@ -1,34 +1,10 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-	_id: Schema.Types.ObjectId, 
-	name: String,
-	userID: String,
-	image: String,
-	location: String,
-	phoneNum: String,
-	email: {
-		type: String,
-		required: true,
-		trim: true,
-		unique: true
-	},
-	password: {
-		type: String,
-		required: true,
-		minLength: 6
-	},
-	aboutMe: String,
-	role: String,
-	restaurantReviews: [{ type: Schema.Types.ObjectId, ref: 'RestaurantReview' }],
-	dishReviews: [{ type: Schema.Types.ObjectId, ref: 'DishReview'}],
-	restaurantsFollowing: [{ type: Schema.Types.ObjectId, ref: 'Restaurant'}],
-	following: [{ type: Schema.Types.ObjectId, ref: 'User'}],
-	follwers: [{ type: Schema.Types.ObjectId, ref: 'User'}]
+const InfoSchema = new Schema({
+	_id: Schema.Types.ObjectId
 });
 
-const Information = mongoose.model('User', UserSchema);
+const Info = mongoose.model('Info', InfoSchema);
 
-module.exports = { User };
+module.exports = { Info };
