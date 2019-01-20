@@ -383,8 +383,12 @@
       // if (final_transcript || interim_transcript) {
       //   showButtons('inline-block');
       // }
-      final_transcript = checkResponse(final_transcript);
-
+      if (final_transcript.includes("yes") || final_transcript.includes("no") || final_transcript.includes("confirm") || final_transcript.includes("snapshot") || final_transcript.includes("again")){
+        final_transcript = checkResponse(final_transcript);
+      }
+      else{
+        final_transcript = ""
+      }
     };
   }
 
@@ -529,7 +533,7 @@
 
         console.log(newPatientInfo);
         appendInfo();
-        
+
         nextStage = (stageInt + 1).toString();
         x = document.getElementById(stage);
         y = document.getElementById(nextStage);
