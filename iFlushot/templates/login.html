@@ -390,12 +390,22 @@
   }
 
 var stage = "1";
+var responseList = [];
+
 function checkResponse (response) {
   var returnString = "";
 
   response = response.toLowerCase();
   console.log(response);
   if (response.indexOf("next") >= 0) {
+    
+    if (response.includes("yes"))  {
+      responseList.append("yes");
+    } else if (response.includes("no")) {
+      responseList.append("no");
+    } else {
+      // TO-DO: OUTPUT MESSAGE IN FRONT-END SAYING 'RESPONSE/ANSWER INVALID; PLEASE TRY AGAIN' or something along those lines
+    };
 
     var stageInt = parseInt(stage);
     var nextStage, x, y;
