@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
               <label for="healthcard">Health Card Number</label>
-              <input type="number" class="form-control" id="healthcard" placeholder="Health Card Number">
+              <input type="text" class="form-control" id="healthcard" placeholder="Health Card Number">
             </div>
 
             <a href="#q1" class="form-button button is-primary is-inverted is-outlined">confirm</a>
@@ -71,64 +71,67 @@
   </div>
 </section>
 <section id="2" style="display: none" class="hero is-primary is-bold is-medium" style="display: none">
-  <div class="hero-body" id = "q1">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Are you sick today  <br>(i.e., fever greater than 39.5°C, breathing problems, active infection)? <br> <br>Yes or No? </p>
-</div>
-</div>
+  <div class="hero-body" id="q1">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Are you sick today <br>(i.e., fever greater than 39.5°C, breathing problems, active
+        infection)? <br> <br>Yes or No? </p>
+    </div>
+  </div>
 </section>
-<section id="3" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q2">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have allergy to egg products? <br> <br>Yes or No?</p>
-</div>
-</div>
+<section id="3" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q2">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have allergy to egg products? <br> <br>Yes or No?</p>
+    </div>
+  </div>
 </section>
-<section id="4" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q3">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have allergy to any components of flu vaccine? <br> (e.g., gentamicin, neomycin, kanamycin, thimersol, formaldehyde?) <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="4" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q3">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have allergy to any components of flu vaccine? <br> (e.g., gentamicin, neomycin,
+        kanamycin, thimersol, formaldehyde?) <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
-<section id="5" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q4">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you take a blood thinner or have a bleeding disorder? <br> <br> Yes or No?</p>
-</div>
-</div>
-</section>
-
-<section id="6" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q5">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Have you had a serious reaction to influenza vaccine in the past? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="5" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q4">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you take a blood thinner or have a bleeding disorder? <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="7" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q6">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have a new or changing condition affecting the brain or nervous system? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="6" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q5">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Have you had a serious reaction to influenza vaccine in the past? <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="8" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q7">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Have you ever had Guillain-Barré syndrome? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="7" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q6">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have a new or changing condition affecting the brain or nervous system? <br> <br>
+        Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="9" style="display: none" class="hero is-primary is-bold is-medium" >
+<section id="8" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q7">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Have you ever had Guillain-Barré syndrome? <br> <br> Yes or No?</p>
+    </div>
+  </div>
+</section>
+
+<section id="9" style="display: none" class="hero is-primary is-bold is-medium">
   <div class="hero-body">
-    <div class="container has-text-centered" >
-<button type="button" id="confirm" onclick="confirmProfile()" class="button is-large is-primary is-inverted is-outlined">Submit</button>
-</div>
-</div>
+    <div class="container has-text-centered">
+      <button type="button" id="confirm" onclick="confirmProfile()" class="button is-large is-primary is-inverted is-outlined">Submit</button>
+    </div>
+  </div>
 </section>
 {% endblock %}
 {% block scripts %}
@@ -146,6 +149,9 @@
         button.disabled = false;
         button.onclick = function () {
           canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+          var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+          // window.location.href=img; // it will save locally
+
           $(function () {
             var params = {
               // Request parameters
@@ -155,7 +161,7 @@
             // image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D";
 
             $.ajax({
-                url: "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/ocr?" + $.param(params),
+                url: "/card",
                 beforeSend: function (xhrObj) {
                   // Request headers
                   xhrObj.setRequestHeader("Content-Type", "application/json");
@@ -163,15 +169,22 @@
                 },
                 type: "POST",
                 // Request body
-                data: '{"url":"https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhKFS0EtN4REnaKMNNSZxYb1oIWgwks5cTMHBwA%3D%3D"}'
+                // data: JSON.stringify({
+                //   "url":img
+                // })
+                data: JSON.stringify({
+                  "url":img
+                })
+                // data: '{"url":"https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhKFS0EtN4REnaKMNNSZxYb1oIWgwks5cTMHBwA%3D%3D"}'
               })
               .done(function (data) {
-                console.log(data)
-                document.getElementById("firstName").value = "Xi"
-                document.getElementById("lastName").value = "Yan"
-                document.getElementById("birthdate").value = "1997-08-30"
-                document.getElementById("age").value = 21
-                document.getElementById("healthcard").value = 123456789
+                patient = JSON.parse(data)
+                console.log(JSON.parse(data))
+                document.getElementById("firstName").value = patient.first_name
+                document.getElementById("lastName").value = patient.last_name
+                document.getElementById("birthdate").value = patient.birthdate
+                document.getElementById("age").value = patient.age
+                document.getElementById("healthcard").value = patient.healthcard
                 // alert("success");
               })
               .fail(function () {
@@ -205,11 +218,11 @@
       data: JSON.stringify(newPatient),
       contentType: 'application/json',
       dataType: 'json',
-      success: function() {
+      success: function () {
         console.log("YAY");
-        window.location.href='/'
+        window.location.href = '/'
       },
-      error:function(err) {
+      error: function (err) {
         console.log(err);
       }
     });
@@ -388,58 +401,57 @@
     };
   }
 
-var stage = "1";
-var responseList = [];
+  var stage = "1";
+  var responseList = [];
 
-function checkResponse (response) {
-  var returnString = "";
+  function checkResponse(response) {
+    var returnString = "";
 
-  response = response.toLowerCase();
-  console.log(response);
+    response = response.toLowerCase();
+    console.log(response);
 
-  if (response.indexOf("next") >= 0) {
-    
-    if (response.includes("yes"))  {
-      responseList.append("yes");
-    } else if (response.includes("no")) {
-      responseList.append("no");
-    } else {
-      // TO-DO: OUTPUT MESSAGE IN FRONT-END SAYING 'RESPONSE/ANSWER INVALID; PLEASE TRY AGAIN' or something along those lines
-    };
+    if (response.indexOf("next") >= 0) {
 
-    var stageInt = parseInt(stage);
-    var nextStage, x, y;
+      if (response.includes("yes")) {
+        responseList.append("yes");
+      } else if (response.includes("no")) {
+        responseList.append("no");
+      } else {
+        // TO-DO: OUTPUT MESSAGE IN FRONT-END SAYING 'RESPONSE/ANSWER INVALID; PLEASE TRY AGAIN' or something along those lines
+      };
 
-    if (stageInt != 9){
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
+      var stageInt = parseInt(stage);
+      var nextStage, x, y;
+
+      if (stageInt != 9) {
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+      } else if (stageInt == 9) {
+        x = document.getElementById(stage);
+        y = document.getElementById("1");
+        stage = "1";
+      }
+
+      // toggle display
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+
+      return returnString;
     }
-    else if (stageInt == 9){
-      x = document.getElementById(stage);
-      y = document.getElementById("1");
-      stage = "1";
-    }
 
-    // toggle display
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-    if (y.style.display === "none") {
-      y.style.display = "block";
-    } else {
-      y.style.display = "none";
-    }    
-
+    returnString = response;
     return returnString;
   }
-
-  returnString = response;
-  return returnString;
-}
 
   function upgrade() {
     start_button.style.visibility = 'hidden';

@@ -3,6 +3,7 @@
 # from scripts import tabledef
 # from scripts import forms
 from scripts import db as db
+from scripts import image as image
 from flask import Flask, redirect, url_for, render_template, request, session
 import json
 import sys
@@ -24,6 +25,12 @@ def add_patient():
     req_data = request.get_json()
     db.add_patient(req_data)
     return redirect(url_for('login'))
+
+@app.route('/card', methods=['POST'])
+def get_card():
+    req_data = request.get_json()
+    patient = image.get_card_info(req_data)
+    return json.dumps(patient)
 
 
 # ======== Main ============================================================== #
