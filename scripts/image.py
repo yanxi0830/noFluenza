@@ -28,8 +28,8 @@ ocr_url = vision_base_url + "ocr"
 
 # Set image_path to the local path of an image that you want to analyze.
 image_path = "../media/tmp.png"
-card1 = "https://raw.githubusercontent.com/yanxi0830/uofthacks/yanxi/iFlushot/media/card1.png?token=ATBbhLRQ_3WsJq3vutE_jhWuVft17E5lks5cTSh7wA%3D%3D"
-card2 = "https://raw.githubusercontent.com/yanxi0830/uofthacks/yanxi/iFlushot/media/card2.png?token=ATBbhB1-6IQMnVuDepaZ-kAjEk6Z0Rn-ks5cTSiVwA%3D%3D"
+card1 = "https://raw.githubusercontent.com/yanxi0830/noFluenza/master/media/card2.png?token=ATBbhHhGhMST5wIeEyb5tb3_rGug1oMZks5cTU5VwA%3D%3D"
+card2 = "https://raw.githubusercontent.com/yanxi0830/noFluenza/master/media/card1.png?token=ATBbhBhKwLVHfEeF-Y2RL8bQqpa6ppPjks5cTU5FwA%3D%3D"
 headers    = {'Ocp-Apim-Subscription-Key': subscription_key}
 params  = {'language': 'en', 'detectOrientation': 'false'}
 
