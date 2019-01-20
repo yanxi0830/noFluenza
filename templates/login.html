@@ -61,7 +61,7 @@
           <i><a id="feedback" class="feedback"></a></i>
         </div>
       </div>
-      <span>Say "SNAPSHOT" to take photo of your healthcard.</span>
+      <span>Say "CAPTURE" to take photo of your healthcard.</span>
       <br>
       <span>Then say "CONFIRM" to confirm your information. If not, please edit it in the field, then say 'CONFIRM'.</span>
     </div>
@@ -401,7 +401,7 @@
     var answered = false;
 
     if (stageInt == 1) {
-      if (response.includes("snapshot")) {
+      if (response.includes("capture")) {
         takePhoto();
       } else if (response.includes("confirm")) {
 
