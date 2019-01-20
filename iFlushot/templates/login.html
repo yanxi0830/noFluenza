@@ -54,7 +54,7 @@
             </video>
           </div>
           <br>
-          
+
           <canvas id="canvas" style="display:none;" width="300" height="300"></canvas>
           <br>
           <br>
@@ -71,62 +71,66 @@
   </div>
 </section>
 <section id="2" style="display: none" class="hero is-primary is-bold is-medium" style="display: none">
-  <div class="hero-body" id = "q1">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Are you sick today  <br>(i.e., fever greater than 39.5°C, breathing problems, active infection)? <br> <br>Yes or No? </p>
-</div>
-</div>
+  <div class="hero-body" id="q1">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Are you sick today <br>(i.e., fever greater than 39.5°C, breathing problems, active
+        infection)? <br> <br>Yes or No? </p>
+    </div>
+  </div>
 </section>
-<section id="3" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q2">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have allergy to egg products? <br> <br>Yes or No?</p>
-</div>
-</div>
+<section id="3" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q2">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have allergy to egg products? <br> <br>Yes or No?</p>
+    </div>
+  </div>
 </section>
-<section id="4" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q3">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have allergy to any components of flu vaccine? <br> (e.g., gentamicin, neomycin, kanamycin, thimersol, formaldehyde?) <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="4" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q3">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have allergy to any components of flu vaccine? <br> (e.g., gentamicin, neomycin,
+        kanamycin, thimersol, formaldehyde?) <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
-<section id="5" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q4">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you take a blood thinner or have a bleeding disorder? <br> <br> Yes or No?</p>
-</div>
-</div>
-</section>
-
-<section id="6" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q5">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Have you had a serious reaction to influenza vaccine in the past? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="5" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q4">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you take a blood thinner or have a bleeding disorder? <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="7" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q6">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Do you have a new or changing condition affecting the brain or nervous system? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="6" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q5">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Have you had a serious reaction to influenza vaccine in the past? <br> <br> Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="8" style="display: none" class="hero is-primary is-bold is-medium" >
-  <div class="hero-body" id = "q7">
-    <div class="container has-text-centered" >
-<p class="title is-2"> Have you ever had Guillain-Barré syndrome? <br> <br> Yes or No?</p>
-</div>
-</div>
+<section id="7" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q6">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Do you have a new or changing condition affecting the brain or nervous system? <br> <br>
+        Yes or No?</p>
+    </div>
+  </div>
 </section>
 
-<section id="9" style="display: none" class="hero is-primary is-bold is-medium" >
+<section id="8" style="display: none" class="hero is-primary is-bold is-medium">
+  <div class="hero-body" id="q7">
+    <div class="container has-text-centered">
+      <p class="title is-2"> Have you ever had Guillain-Barré syndrome? <br> <br> Yes or No?</p>
+    </div>
+  </div>
+</section>
+
+<section id="9" style="display: none" class="hero is-primary is-bold is-medium">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <div style="font-weight:bold; font-size: 30px;">Thank You for completing the form! Here is a record of your answers:</div>
+      <div style="font-weight:bold; font-size: 30px;">Thank You for completing the form! Here is a record of your
+        answers:</div>
       <br>
 
       <div id="answerForm" style="text-align: left"></div>
@@ -142,12 +146,11 @@
       </div>
 
     </div>
-</div>
+  </div>
 </section>
 {% endblock %}
 {% block scripts %}
 <script type="text/javascript">
-
   var video = document.querySelector("#videoElement");
   var button = document.getElementById("picture-button");
   var canvas = document.getElementById("canvas");
@@ -165,45 +168,53 @@
       });
   }
 
-function takePhoto(){
-  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  $(function () {
-    var params = {
-      // Request parameters
-      "language": "en",
-      "detectOrientation ": "false",
-    };
-    // image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D";
+  function takePhoto() {
+    canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+    var img = canvas.toDataURL("image/png");
+    $(function () {
+      var params = {
+        // Request parameters
+        "language": "en",
+        "detectOrientation ": "false",
+      };
+      // image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D";
 
-    $.ajax({
-        url: "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/ocr?" + $.param(params),
-        beforeSend: function (xhrObj) {
-          // Request headers
-          xhrObj.setRequestHeader("Content-Type", "application/json");
-          xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "6f1ee2649c0b42129fb2775815d9c526");
-        },
-        type: "POST",
-        // Request body
-        data: '{"url":"https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhKFS0EtN4REnaKMNNSZxYb1oIWgwks5cTMHBwA%3D%3D"}'
-      })
-      .done(function (data) {
-        console.log(data)
-        document.getElementById("firstName").value = "Xi"
-        document.getElementById("lastName").value = "Yan"
-        document.getElementById("birthdate").value = "1997-08-30"
-        document.getElementById("age").value = 21
-        document.getElementById("healthcard").value = "5061-418-744-PY"
-        // alert("success");
-      })
-      .fail(function () {
-        alert("error");
-      });
-  });
-  //document.getElementById('forms1').scrollIntoView();
-  //var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-  //window.location.href=img; // it will save locally
-  //alert("Done");
-}
+      $.ajax({
+          url: "/card",
+          beforeSend: function (xhrObj) {
+            // Request headers
+            xhrObj.setRequestHeader("Content-Type", "application/json");
+            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "6f1ee2649c0b42129fb2775815d9c526");
+          },
+          type: "POST",
+          // Request body
+          // data: JSON.stringify({
+          //   "url":img
+          // })
+          data: JSON.stringify({
+            "url": img
+          })
+          // data: '{"url":"https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhKFS0EtN4REnaKMNNSZxYb1oIWgwks5cTMHBwA%3D%3D"}'
+        })
+        .done(function (data) {
+          patient = JSON.parse(data)
+          console.log(JSON.parse(data))
+          document.getElementById("firstName").value = patient.first_name
+          document.getElementById("lastName").value = patient.last_name
+          document.getElementById("birthdate").value = patient.birthdate
+          document.getElementById("age").value = patient.age
+          document.getElementById("healthcard").value = patient.healthcard
+          // alert("success");
+        })
+        .fail(function () {
+          alert("error");
+        });
+    });
+    //document.getElementById('forms1').scrollIntoView();
+    //var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    //window.location.href=img; // it will save locally
+    //alert("Done");
+  }
   // ============================== START GETTING PATIENT INFO (confirm) ===================
   // speech recognition
   var langs = [
@@ -377,364 +388,349 @@ function takePhoto(){
     };
   }
 
-var stage = "1";
-var newPatientInfo = {}
+  var stage = "1";
+  var newPatientInfo = {}
 
-function checkResponse (response) {
-  response = response.toLowerCase();
-  console.log(response);
+  function checkResponse(response) {
+    response = response.toLowerCase();
+    console.log(response);
 
-  var stageInt = parseInt(stage);
-  var nextStage, x, y;
-  var answered = false;
+    var stageInt = parseInt(stage);
+    var nextStage, x, y;
+    var answered = false;
 
-  if (stageInt == 1){
-    if (response.includes("snapshot")){
-      takePhoto();
-    }
-    else if (response.includes("confirm")){
+    if (stageInt == 1) {
+      if (response.includes("snapshot")) {
+        takePhoto();
+      } else if (response.includes("confirm")) {
 
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
 
-      newPatientInfo["first_name"] = document.getElementById("firstName").value;
-      newPatientInfo["last_name"] = document.getElementById("lastName").value;
-      newPatientInfo["birthdate"] = document.getElementById("birthdate").value;
-      newPatientInfo["age"] = document.getElementById("age").value;
-      newPatientInfo["healthcard"] = document.getElementById("healthcard").value;
+        newPatientInfo["first_name"] = document.getElementById("firstName").value;
+        newPatientInfo["last_name"] = document.getElementById("lastName").value;
+        newPatientInfo["birthdate"] = document.getElementById("birthdate").value;
+        newPatientInfo["age"] = document.getElementById("age").value;
+        newPatientInfo["healthcard"] = document.getElementById("healthcard").value;
 
-      document.getElementById("personalInfoForm").reset();
+        document.getElementById("personalInfoForm").reset();
 
-      stage = nextStage;
-      answered = true;
+        stage = nextStage;
+        answered = true;
+      }
+
+    } else if (stageInt == 2) {
+      if (response.includes("yes")) {
+        newPatientInfo["q1"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q1"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 3) {
+      if (response.includes("yes")) {
+        newPatientInfo["q2"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q2"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 4) {
+      if (response.includes("yes")) {
+        newPatientInfo["q3"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q3"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 5) {
+      if (response.includes("yes")) {
+        newPatientInfo["q4"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q4"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 6) {
+      if (response.includes("yes")) {
+        newPatientInfo["q5"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q5"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 7) {
+      if (response.includes("yes")) {
+        newPatientInfo["q6"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q6"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      }
+    } else if (stageInt == 8) {
+      if (response.includes("yes")) {
+        newPatientInfo["q7"] = "yes";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+      } else if (response.includes("no")) {
+        newPatientInfo["q7"] = "no";
+        nextStage = (stageInt + 1).toString();
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        appendInfo();
+        answered = true;
+      }
+    } else if (stageInt == 9) {
+      console.log(newPatientInfo)
+      if (response.includes("confirm")) {
+        nextStage = "1";
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+        confirmProfile(newPatientInfo);
+        deleteInfo();
+      } else if (response.includes("again")) {
+        nextStage = "1";
+        x = document.getElementById(stage);
+        y = document.getElementById(nextStage);
+        stage = nextStage;
+        answered = true;
+        deleteInfo();
+      }
     }
 
-  }
-  else if (stageInt == 2){
-    if (response.includes("yes")){
-      newPatientInfo["q1"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
+    if (answered) {
+      // toggle display
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
     }
-    else if (response.includes("no")){
-      newPatientInfo["q1"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 3){
-    if (response.includes("yes")){
-      newPatientInfo["q2"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q2"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 4){
-    if (response.includes("yes")){
-      newPatientInfo["q3"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q3"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 5){
-    if (response.includes("yes")){
-      newPatientInfo["q4"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q4"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 6){
-    if (response.includes("yes")){
-      newPatientInfo["q5"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q5"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 7){
-    if (response.includes("yes")){
-      newPatientInfo["q6"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q6"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-  }
-  else if (stageInt == 8){
-    if (response.includes("yes")){
-      newPatientInfo["q7"] = "yes";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-    }
-    else if (response.includes("no")){
-      newPatientInfo["q7"] = "no";
-      nextStage = (stageInt + 1).toString();
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      appendInfo();
-      answered = true;
-    }
-  }
-  else if (stageInt == 9){
-    console.log(newPatientInfo)
-    if (response.includes("confirm")){
-      nextStage = "1";
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-      confirmProfile(newPatientInfo);
-      deleteInfo();
-    }
-    else if (response.includes("again")){
-      nextStage = "1";
-      x = document.getElementById(stage);
-      y = document.getElementById(nextStage);
-      stage = nextStage;
-      answered = true;
-      deleteInfo();
-    }
+    return "";
   }
 
-  if (answered){
-    // toggle display
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-    if (y.style.display === "none") {
-      y.style.display = "block";
-    } else {
-      y.style.display = "none";
+  function deleteInfo() {
+    node = document.getElementById("answerForm");;
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
     }
   }
-  return "";
-}
 
-function deleteInfo(){
-  node = document.getElementById("answerForm");;
-  while (node.firstChild) {
-    node.removeChild(node.firstChild);
+  function appendInfo() {
+    var node1 = document.createElement("div");
+    var span1a = document.createElement("span");
+    span1a.setAttribute("style", "font-weight: bold;");
+    var span1b = document.createElement("span");
+    var textnode1a = document.createTextNode("First Name: ");
+    var textnode1b = document.createTextNode(newPatientInfo["first_name"]);
+    span1a.appendChild(textnode1a);
+    span1b.appendChild(textnode1b);
+    node1.appendChild(span1a);
+    node1.appendChild(span1b);
+
+    var node2 = document.createElement("div");
+    var span2a = document.createElement("span");
+    span2a.setAttribute("style", "font-weight: bold;");
+    var span2b = document.createElement("span");
+    var textnode2a = document.createTextNode("Last Name ");
+    var textnode2b = document.createTextNode(newPatientInfo["last_name"]);
+    span2a.appendChild(textnode2a);
+    span2b.appendChild(textnode2b);
+    node2.appendChild(span2a);
+    node2.appendChild(span2b);
+
+    var node3 = document.createElement("div");
+    var span3a = document.createElement("span");
+    span3a.setAttribute("style", "font-weight: bold;");
+    var span3b = document.createElement("span");
+    var textnode3a = document.createTextNode("Birth Date: ");
+    var textnode3b = document.createTextNode(newPatientInfo["birthdate"]);
+    span3a.appendChild(textnode3a);
+    span3b.appendChild(textnode3b);
+    node3.appendChild(span3a);
+    node3.appendChild(span3b);
+
+    var node4 = document.createElement("div");
+    var span4a = document.createElement("span");
+    span4a.setAttribute("style", "font-weight: bold;");
+    var span4b = document.createElement("span");
+    var textnode4a = document.createTextNode("Age: ");
+    var textnode4b = document.createTextNode(newPatientInfo["age"]);
+    span4a.appendChild(textnode4a);
+    span4b.appendChild(textnode4b);
+    node4.appendChild(span4a);
+    node4.appendChild(span4b);
+
+    var node5 = document.createElement("div");
+    var span5a = document.createElement("span");
+    span5a.setAttribute("style", "font-weight: bold;");
+    var span5b = document.createElement("span");
+    var textnode5a = document.createTextNode("Health Card: ");
+    var textnode5b = document.createTextNode(newPatientInfo["healthcard"]);
+    span5a.appendChild(textnode5a);
+    span5b.appendChild(textnode5b);
+    node5.appendChild(span5a);
+    node5.appendChild(span5b);
+
+    var break1 = document.createElement("br");
+
+    var node6 = document.createElement("div");
+    var div6a = document.createElement("div");
+    div6a.setAttribute("style", "font-weight: bold;");
+    var div6b = document.createElement("div");
+    var textnode6a = document.createTextNode(
+      "Are you sick today (i.e., fever greater than 39.5°C, breathing problems, active infection)?");
+    var textnode6b = document.createTextNode(newPatientInfo["q1"]);
+    div6a.appendChild(textnode6a);
+    div6b.appendChild(textnode6b);
+    node6.appendChild(div6a);
+    node6.appendChild(div6b);
+
+    var node7 = document.createElement("div");
+    var div7a = document.createElement("div");
+    div7a.setAttribute("style", "font-weight: bold;");
+    var div7b = document.createElement("div");
+    var textnode7a = document.createTextNode("Do you have allergy to egg products?");
+    var textnode7b = document.createTextNode(newPatientInfo["q2"]);
+    div7a.appendChild(textnode7a);
+    div7b.appendChild(textnode7b);
+    node7.appendChild(div7a);
+    node7.appendChild(div7b);
+
+    var node8 = document.createElement("div");
+    var div8a = document.createElement("div");
+    div8a.setAttribute("style", "font-weight: bold;");
+    var div8b = document.createElement("div");
+    var textnode8a = document.createTextNode("Do you have allergy to any components of flu vaccine?");
+    var textnode8b = document.createTextNode(newPatientInfo["q3"]);
+    div8a.appendChild(textnode8a);
+    div8b.appendChild(textnode8b);
+    node8.appendChild(div8a);
+    node8.appendChild(div8b);
+
+    var node9 = document.createElement("div");
+    var div9a = document.createElement("div");
+    div9a.setAttribute("style", "font-weight: bold;");
+    var div9b = document.createElement("div");
+    var textnode9a = document.createTextNode("Do you take a blood thinner or have a bleeding disorder?");
+    var textnode9b = document.createTextNode(newPatientInfo["q4"]);
+    div9a.appendChild(textnode9a);
+    div9b.appendChild(textnode9b);
+    node9.appendChild(div9a);
+    node9.appendChild(div9b);
+
+    var node10 = document.createElement("div");
+    var div10a = document.createElement("div");
+    div10a.setAttribute("style", "font-weight: bold;");
+    var div10b = document.createElement("div");
+    var textnode10a = document.createTextNode("Have you had a serious reaction to influenza vaccine in the past?");
+    var textnode10b = document.createTextNode(newPatientInfo["q5"]);
+    div10a.appendChild(textnode10a);
+    div10b.appendChild(textnode10b);
+    node10.appendChild(div10a);
+    node10.appendChild(div10b);
+
+    var node11 = document.createElement("div");
+    var div11a = document.createElement("div");
+    div11a.setAttribute("style", "font-weight: bold;");
+    var div11b = document.createElement("div");
+    var textnode11a = document.createTextNode(
+      "Do you have a new or changing condition affecting the brain or nervous system?");
+    var textnode11b = document.createTextNode(newPatientInfo["q6"]);
+    div11a.appendChild(textnode11a);
+    div11b.appendChild(textnode11b);
+    node11.appendChild(div11a);
+    node11.appendChild(div11b);
+
+    var node12 = document.createElement("div");
+    var div12a = document.createElement("div");
+    div12a.setAttribute("style", "font-weight: bold;");
+    var div12b = document.createElement("div");
+    var textnode12a = document.createTextNode("Have you ever had Guillain-Barré syndrome?");
+    var textnode12b = document.createTextNode(newPatientInfo["q7"]);
+    div12a.appendChild(textnode12a);
+    div12b.appendChild(textnode12b);
+    node12.appendChild(div12a);
+    node12.appendChild(div12b);
+
+    var answerFrom = document.getElementById("answerForm");
+
+    answerFrom.appendChild(node1);
+    answerFrom.appendChild(node2);
+    answerFrom.appendChild(node3);
+    answerFrom.appendChild(node4);
+    answerFrom.appendChild(node5);
+
+    answerFrom.appendChild(break1);
+
+    answerFrom.appendChild(node6);
+    answerFrom.appendChild(node7);
+    answerFrom.appendChild(node8);
+    answerFrom.appendChild(node9);
+    answerFrom.appendChild(node10);
+    answerFrom.appendChild(node11);
+    answerFrom.appendChild(node12);
   }
-}
-
-function appendInfo(){
-  var node1 = document.createElement("div");
-  var span1a = document.createElement("span");
-  span1a.setAttribute("style", "font-weight: bold;");
-  var span1b = document.createElement("span");
-  var textnode1a = document.createTextNode("First Name: ");
-  var textnode1b = document.createTextNode(newPatientInfo["first_name"]);
-  span1a.appendChild(textnode1a);
-  span1b.appendChild(textnode1b);
-  node1.appendChild(span1a);
-  node1.appendChild(span1b);
-
-  var node2 = document.createElement("div");
-  var span2a = document.createElement("span");
-  span2a.setAttribute("style", "font-weight: bold;");
-  var span2b = document.createElement("span");
-  var textnode2a = document.createTextNode("Last Name ");
-  var textnode2b = document.createTextNode(newPatientInfo["last_name"]);
-  span2a.appendChild(textnode2a);
-  span2b.appendChild(textnode2b);
-  node2.appendChild(span2a);
-  node2.appendChild(span2b);
-
-  var node3 = document.createElement("div");
-  var span3a = document.createElement("span");
-  span3a.setAttribute("style", "font-weight: bold;");
-  var span3b = document.createElement("span");
-  var textnode3a = document.createTextNode("Birth Date: ");
-  var textnode3b = document.createTextNode(newPatientInfo["birthdate"]);
-  span3a.appendChild(textnode3a);
-  span3b.appendChild(textnode3b);
-  node3.appendChild(span3a);
-  node3.appendChild(span3b);
-
-  var node4 = document.createElement("div");
-  var span4a = document.createElement("span");
-  span4a.setAttribute("style", "font-weight: bold;");
-  var span4b = document.createElement("span");
-  var textnode4a = document.createTextNode("Age: ");
-  var textnode4b = document.createTextNode(newPatientInfo["age"]);
-  span4a.appendChild(textnode4a);
-  span4b.appendChild(textnode4b);
-  node4.appendChild(span4a);
-  node4.appendChild(span4b); 
-
-  var node5 = document.createElement("div");
-  var span5a = document.createElement("span");
-  span5a.setAttribute("style", "font-weight: bold;");
-  var span5b = document.createElement("span");
-  var textnode5a = document.createTextNode("Health Card: ");
-  var textnode5b = document.createTextNode(newPatientInfo["healthcard"]);
-  span5a.appendChild(textnode5a);
-  span5b.appendChild(textnode5b);
-  node5.appendChild(span5a);
-  node5.appendChild(span5b);
-
-  var break1 = document.createElement("br");
-
-  var node6 = document.createElement("div");
-  var div6a = document.createElement("div");
-  div6a.setAttribute("style", "font-weight: bold;");
-  var div6b = document.createElement("div");
-  var textnode6a = document.createTextNode("Are you sick today (i.e., fever greater than 39.5°C, breathing problems, active infection)?");
-  var textnode6b = document.createTextNode(newPatientInfo["q1"]);
-  div6a.appendChild(textnode6a);
-  div6b.appendChild(textnode6b);
-  node6.appendChild(div6a);
-  node6.appendChild(div6b);
-
-  var node7 = document.createElement("div");
-  var div7a = document.createElement("div");
-  div7a.setAttribute("style", "font-weight: bold;");
-  var div7b = document.createElement("div");
-  var textnode7a = document.createTextNode("Do you have allergy to egg products?");
-  var textnode7b = document.createTextNode(newPatientInfo["q2"]);
-  div7a.appendChild(textnode7a);
-  div7b.appendChild(textnode7b);
-  node7.appendChild(div7a);
-  node7.appendChild(div7b);  
-
-  var node8 = document.createElement("div");
-  var div8a = document.createElement("div");
-  div8a.setAttribute("style", "font-weight: bold;");
-  var div8b = document.createElement("div");
-  var textnode8a = document.createTextNode("Do you have allergy to any components of flu vaccine?");
-  var textnode8b = document.createTextNode(newPatientInfo["q3"]);
-  div8a.appendChild(textnode8a);
-  div8b.appendChild(textnode8b);
-  node8.appendChild(div8a);
-  node8.appendChild(div8b);
-
-  var node9 = document.createElement("div");
-  var div9a = document.createElement("div");
-  div9a.setAttribute("style", "font-weight: bold;");
-  var div9b = document.createElement("div");
-  var textnode9a = document.createTextNode("Do you take a blood thinner or have a bleeding disorder?");
-  var textnode9b = document.createTextNode(newPatientInfo["q4"]);
-  div9a.appendChild(textnode9a);
-  div9b.appendChild(textnode9b);
-  node9.appendChild(div9a);
-  node9.appendChild(div9b); 
-
-  var node10 = document.createElement("div");
-  var div10a = document.createElement("div");
-  div10a.setAttribute("style", "font-weight: bold;");
-  var div10b = document.createElement("div");
-  var textnode10a = document.createTextNode("Have you had a serious reaction to influenza vaccine in the past?");
-  var textnode10b = document.createTextNode(newPatientInfo["q5"]);
-  div10a.appendChild(textnode10a);
-  div10b.appendChild(textnode10b);
-  node10.appendChild(div10a);
-  node10.appendChild(div10b);
-
-  var node11 = document.createElement("div");
-  var div11a = document.createElement("div");
-  div11a.setAttribute("style", "font-weight: bold;");
-  var div11b = document.createElement("div");
-  var textnode11a = document.createTextNode("Do you have a new or changing condition affecting the brain or nervous system?");
-  var textnode11b = document.createTextNode(newPatientInfo["q6"]);
-  div11a.appendChild(textnode11a);
-  div11b.appendChild(textnode11b);
-  node11.appendChild(div11a);
-  node11.appendChild(div11b);
-
-  var node12 = document.createElement("div");
-  var div12a = document.createElement("div");
-  div12a.setAttribute("style", "font-weight: bold;");
-  var div12b = document.createElement("div");
-  var textnode12a = document.createTextNode("Have you ever had Guillain-Barré syndrome?");
-  var textnode12b = document.createTextNode(newPatientInfo["q7"]);
-  div12a.appendChild(textnode12a);
-  div12b.appendChild(textnode12b);
-  node12.appendChild(div12a);
-  node12.appendChild(div12b);
-
-  var answerFrom = document.getElementById("answerForm");
-
-  answerFrom.appendChild(node1);
-  answerFrom.appendChild(node2);
-  answerFrom.appendChild(node3);
-  answerFrom.appendChild(node4);
-  answerFrom.appendChild(node5);
-
-  answerFrom.appendChild(break1);
-
-  answerFrom.appendChild(node6);
-  answerFrom.appendChild(node7);
-  answerFrom.appendChild(node8);
-  answerFrom.appendChild(node9);
-  answerFrom.appendChild(node10);
-  answerFrom.appendChild(node11);
-  answerFrom.appendChild(node12);
-}
 
   function confirmProfile(newPatient) {
     $.ajax({
@@ -743,11 +739,11 @@ function appendInfo(){
       data: JSON.stringify(newPatient),
       contentType: 'application/json',
       dataType: 'json',
-      success: function() {
+      success: function () {
         console.log("YAY");
-        window.location.href='/'
+        window.location.href = '/'
       },
-      error:function(err) {
+      error: function (err) {
         console.log(err);
       }
     });
