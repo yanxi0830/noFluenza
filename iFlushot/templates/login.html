@@ -55,7 +55,7 @@
           </div>
           <br>
 
-          <canvas id="canvas" style="display:none;" width="300" height="300"></canvas>
+          <canvas id="canvas" style="display:none;" width="500" height="380"></canvas>
           <br>
           <br>
           <i><a id="feedback" class="feedback"></a></i>
@@ -169,7 +169,7 @@
   }
 
   function takePhoto() {
-    canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+    canvas.getContext("2d").drawImage(video, 0, 0);
     var img = canvas.toDataURL("image/png");
     $(function () {
       var params = {

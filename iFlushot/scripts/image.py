@@ -69,10 +69,10 @@ def get_card_info(image_path):
     print(word_infos)
 
     patient = {}
-    patient["first_name"] = word_infos[0] if len(word_infos) > 0 else "?"
-    patient["last_name"] = word_infos[1] if len(word_infos) > 1 else "?"
-    patient["healthcard"] = word_infos[2] if len(word_infos) > 2 else "?"
-    patient["birthdate"] = word_infos[3] if len(word_infos) > 3 else "?"
+    patient["first_name"] = word_infos[0] if len(word_infos) > 0 else "John"
+    patient["last_name"] = word_infos[1] if len(word_infos) > 1 else "Doe"
+    patient["healthcard"] = word_infos[2] if len(word_infos) > 2 else "000000"
+    patient["birthdate"] = word_infos[3] if len(word_infos) > 3 else "2000-01-01"
     year = int(word_infos[3][:4]) if len(word_infos) > 3 else 2019
     patient['age'] = 2019 - year
     print(patient)
