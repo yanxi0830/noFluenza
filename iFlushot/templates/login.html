@@ -385,6 +385,7 @@
       //   showButtons('inline-block');
       // }
       final_transcript = checkResponse(final_transcript);
+
     };
   }
 
@@ -394,7 +395,6 @@ function checkResponse (response) {
 
   response = response.toLowerCase();
   console.log(response);
-
   if (response.indexOf("next") >= 0) {
 
     var stageInt = parseInt(stage);
