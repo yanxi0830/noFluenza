@@ -526,15 +526,18 @@
         answered = true;
       } else if (response.includes("no")) {
         newPatientInfo["q7"] = "no";
+
+        console.log(newPatientInfo);
+        appendInfo();
+        
         nextStage = (stageInt + 1).toString();
         x = document.getElementById(stage);
         y = document.getElementById(nextStage);
         stage = nextStage;
-        appendInfo();
         answered = true;
       }
     } else if (stageInt == 9) {
-      console.log(newPatientInfo)
+      
       if (response.includes("confirm")) {
         nextStage = "1";
         x = document.getElementById(stage);
