@@ -6,7 +6,7 @@ Smart Flu Shot Check-in Web Application (UofTHacksVI)
 ```
 git clone https://github.com/yanxi0830/noFluenza
 cd noFluenza
-python app.py
+python3 app.py
 ```
 
 ### Video Demo
