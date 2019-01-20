@@ -383,12 +383,9 @@
       // if (final_transcript || interim_transcript) {
       //   showButtons('inline-block');
       // }
-      if (final_transcript.includes("yes") || final_transcript.includes("no") || final_transcript.includes("confirm") || final_transcript.includes("snapshot") || final_transcript.includes("again")){
-        final_transcript = checkResponse(final_transcript);
-      }
-      else{
-        final_transcript = ""
-      }
+
+      final_transcript = checkResponse(final_transcript);
+
     };
   }
 
@@ -523,11 +520,17 @@
     } else if (stageInt == 8) {
       if (response.includes("yes")) {
         newPatientInfo["q7"] = "yes";
+
+        console.log(newPatientInfo);
+        appendInfo();
+
         nextStage = (stageInt + 1).toString();
         x = document.getElementById(stage);
         y = document.getElementById(nextStage);
+
         stage = nextStage;
         answered = true;
+
       } else if (response.includes("no")) {
         newPatientInfo["q7"] = "no";
 
