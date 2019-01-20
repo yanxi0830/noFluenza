@@ -25,7 +25,8 @@ ocr_url = vision_base_url + "ocr"
 
 # Set image_path to the local path of an image that you want to analyze.
 image_path = "../media/card1.png"
-image_url = "https://raw.githubusercontent.com/yanxi0830/uofthacks/master/iFlushot/media/card.png?token=ATBbhFDsfRTM_unu2SmlXeHzR-h9g7HEks5cTKkwwA%3D%3D"
+card1 = "https://raw.githubusercontent.com/yanxi0830/uofthacks/yanxi/iFlushot/media/card1.png?token=ATBbhLRQ_3WsJq3vutE_jhWuVft17E5lks5cTSh7wA%3D%3D"
+card2 = "https://raw.githubusercontent.com/yanxi0830/uofthacks/yanxi/iFlushot/media/card2.png?token=ATBbhB1-6IQMnVuDepaZ-kAjEk6Z0Rn-ks5cTSiVwA%3D%3D"
 headers    = {'Ocp-Apim-Subscription-Key': subscription_key}
 params  = {'language': 'en', 'detectOrientation': 'false'}
 # data    = {'url': image_url}
@@ -48,8 +49,7 @@ params  = {'language': 'en', 'detectOrientation': 'false'}
 
 def get_card_info(image_path):
     patient = {}
-    print(image_path['url'])
-    data    = {'url': image_url}
+    data    = {'url': card2}
     response = requests.post(ocr_url, headers=headers, params=params, json=data)
     response.raise_for_status()
     analysis = response.json()
@@ -60,12 +60,14 @@ def get_card_info(image_path):
     for line in line_infos:
         for word_metadata in line:
             for word_info in word_metadata["words"]:
-                word_infos.append(word_info)
+                word_infos.append(word_info['text'])
     print(word_infos)
-    patient["first_name"] = "Xisdha"
-    patient["last_name"] = "Yan"
-    patient["birthdate"] = "1997-08-30"
-    patient['age'] = 21
-    patient["healthcard"] = "128-382-387"
+    patient["first_name"] = word_infos[0]
+    patient["last_name"] = word_infos[1]
+    patient["healthcard"] = word_infos[2]
+    patient["birthdate"] = word_infos[3]
+    year = int(word_infos[3][:4])
+    patient['age'] = 2019 - year
+    print(patient)
     return patient
 
