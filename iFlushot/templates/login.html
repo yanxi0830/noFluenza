@@ -547,6 +547,7 @@ function checkResponse (response) {
       stage = nextStage;
       answered = true;
       confirmProfile(newPatientInfo);
+      deleteInfo();
     }
     else if (response.includes("again")){
       nextStage = "1";
@@ -554,8 +555,8 @@ function checkResponse (response) {
       y = document.getElementById(nextStage);
       stage = nextStage;
       answered = true;
+      deleteInfo();
     }
-    deleteInfo()
   }
 
   if (answered){
@@ -666,7 +667,7 @@ function appendInfo(){
   div8a.setAttribute("style", "font-weight: bold;");
   var div8b = document.createElement("div");
   var textnode8a = document.createTextNode("Do you have allergy to any components of flu vaccine?");
-  var textnode8b = document.createTextNode(newPatientInfo["q1"]);
+  var textnode8b = document.createTextNode(newPatientInfo["q3"]);
   div8a.appendChild(textnode8a);
   div8b.appendChild(textnode8b);
   node8.appendChild(div8a);
@@ -677,7 +678,7 @@ function appendInfo(){
   div9a.setAttribute("style", "font-weight: bold;");
   var div9b = document.createElement("div");
   var textnode9a = document.createTextNode("Do you take a blood thinner or have a bleeding disorder?");
-  var textnode9b = document.createTextNode(newPatientInfo["q1"]);
+  var textnode9b = document.createTextNode(newPatientInfo["q4"]);
   div9a.appendChild(textnode9a);
   div9b.appendChild(textnode9b);
   node9.appendChild(div9a);
@@ -688,7 +689,7 @@ function appendInfo(){
   div10a.setAttribute("style", "font-weight: bold;");
   var div10b = document.createElement("div");
   var textnode10a = document.createTextNode("Have you had a serious reaction to influenza vaccine in the past?");
-  var textnode10b = document.createTextNode(newPatientInfo["q1"]);
+  var textnode10b = document.createTextNode(newPatientInfo["q5"]);
   div10a.appendChild(textnode10a);
   div10b.appendChild(textnode10b);
   node10.appendChild(div10a);
@@ -699,7 +700,7 @@ function appendInfo(){
   div11a.setAttribute("style", "font-weight: bold;");
   var div11b = document.createElement("div");
   var textnode11a = document.createTextNode("Do you have a new or changing condition affecting the brain or nervous system?");
-  var textnode11b = document.createTextNode(newPatientInfo["q1"]);
+  var textnode11b = document.createTextNode(newPatientInfo["q6"]);
   div11a.appendChild(textnode11a);
   div11b.appendChild(textnode11b);
   node11.appendChild(div11a);
@@ -710,7 +711,7 @@ function appendInfo(){
   div12a.setAttribute("style", "font-weight: bold;");
   var div12b = document.createElement("div");
   var textnode12a = document.createTextNode("Have you ever had Guillain-Barré syndrome?");
-  var textnode12b = document.createTextNode(newPatientInfo["q1"]);
+  var textnode12b = document.createTextNode(newPatientInfo["q7"]);
   div12a.appendChild(textnode12a);
   div12b.appendChild(textnode12b);
   node12.appendChild(div12a);
