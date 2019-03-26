@@ -12,5 +12,3 @@ python3 app.py
 ### Video Demo
 
 https://www.youtube.com/watch?v=PkN3lDesraw
-
-# WORK IN PROGRESS
